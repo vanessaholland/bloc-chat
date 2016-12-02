@@ -3,7 +3,9 @@
          var ref = firebase.database().ref().child("rooms");
          var rooms = $firebaseArray(ref);
 
-         console.log("rooms: " + rooms.length);
+         rooms.$loaded().then(function(_rooms){
+             console.log("rooms: " + _rooms.length);
+         });
          return {
            all: rooms
          };
