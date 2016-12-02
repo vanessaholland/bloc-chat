@@ -1,9 +1,16 @@
 (function() {
-    function RoomListCtrl(Room) {
-        this.roomList = Room;
-       }
+    function RoomListCtrl($scope, $firebaseArray) {
+         var ref = firebase.database().ref().child("rooms");
+         var rooms = $firebaseArray(ref);
 
-     angular
-         .module('blocChat')
-         .controller('RoomListCtrl', ['Room', RoomListCtrl]);
+         rooms.$loaded().then(function(_rooms){
+             console.log("rooms: " + _rooms.length);
+         });
+         $scope.rooms = rooms;
+    }
+
+    angular
+        .module('blocChat')
+        .controller('RoomListCtrl', ['$scope', '$firebaseArray', RoomListCtrl]);
+
  })();
