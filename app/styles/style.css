@@ -1,0 +1,79 @@
+html {
+     height: 100%; /* makes sure our HTML takes up 100% of the browser window */
+     font-size: 100%;
+ }
+
+ body {
+     background-image: url(../assets/images/blurred_backgrounds/blur_bg.jpg);
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center center;
+     background-size: cover;
+     font-family: 'Open Sans'; /* sets our font to the "Open Sans" typeface */
+     color: white;             /* sets the text color to white */
+     min-height: 100%;         /* says the height of the body must be, at minimum, 100% of the window */
+     padding-bottom: 200px;
+ }
+
+ .hero-content {
+      position: relative;
+      min-height: 600px;
+  }
+
+  .hero-content .hero-title {
+     position: absolute;
+     top: 20%;
+     -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+     transform: translateY(-50%);
+     width: 100%;
+     text-align: center;
+     font-size: 4rem;
+     font-weight: 300;
+     text-transform: uppercase;
+     letter-spacing: 0.5rem;
+     text-shadow: 1px 1px 0px rgb(58,23,63);
+     -webkit-transform: scaleX(0.9) translateY(3rem);
+     -moz-transform: scaleX(0.9) translateY(3rem);
+     transform: scaleX(0.9) translateY(3rem);
+     -webkit-transition: all 0.50s cubic-bezier(.17,.67,.81,.11);
+     -moz-transition: all 0.50s cubic-bezier(.17,.67,.81,.11);
+     transition: all 0.50s cubic-bezier(.17,.67,.81,.11);
+     -webkit-transition-delay: 0.2s;
+     -moz-transition-delay: 0.2s;
+     transition-delay: 0.2s;
+ }
+
+ .navbar {
+      position: relative;
+      padding: 0.5rem;
+      z-index: 100;
+  }
+
+ .navbar .logo {
+     position: relative;
+     left: 0;
+     cursor: pointer;
+ }
+
+ @media (min-width: 640px) {
+   html { font-size: 112%; }
+
+     .column {
+         float: left;
+         padding-left: 1rem;
+         padding-right: 1rem;
+     }
+
+     .column.full { width: 100%; }
+     .column.two-thirds { width: 66.7%; }
+     .column.half { width: 50%; }
+     .column.third { width: 33.3%; }
+     .column.fourth { width: 25%; }
+     .column.flow-opposite { float: right; }
+ }
+
+ /* Large screens (1024px) */
+ @media (min-width: 1024px) {
+   html { font-size: 120%; }
+ }
