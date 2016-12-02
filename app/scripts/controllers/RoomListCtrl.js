@@ -7,10 +7,14 @@
              console.log("rooms: " + _rooms.length);
          });
          $scope.rooms = rooms;
-       }
+    }
 
+    function RoomListCtrl(Room) {
+        this.roomList = Room;
+    }
 
-     angular
-         .module('blocChat')
-         .controller('RoomListCtrl', ['$scope', '$firebaseArray', RoomListCtrl]);
+    angular
+        .module('blocChat')
+        .controller('RoomListCtrl', ['$scope', '$firebaseArray', RoomListCtrl]);
+
  })();
