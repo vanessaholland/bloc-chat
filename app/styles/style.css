@@ -55,6 +55,17 @@ html {
      left: 0;
      cursor: pointer;
  }
+ .add-room {
+   position: fixed;
+   top: 20px;
+   right:0;
+   z-index: 100;
+ }
+ .add-room btn:hover {
+   color: white;
+   cursor: pointer;
+   text-decoration: none;
+ }
 
  @media (min-width: 640px) {
    html { font-size: 112%; }
