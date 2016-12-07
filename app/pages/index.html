@@ -20,8 +20,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.1.4/ui-bootstrap-tpls.min.js"></script>
-     <script src="/scripts/app.js"></script>
+    <script src="/scripts/ui-bootstrap-tpls-2.3.0.min.js"></script>
+    <script src="/scripts/app.js"></script>
     <script src="/scripts/services/Room.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
     <script src="/scripts/controllers/RoomListCtrl.js"></script>
@@ -29,21 +29,6 @@
 
     <ng-include src="'/templates/room_list.html'"></ng-include>
     <div class="add-room" ng-controller="AddRoomCtrl as addRoom">
-        <script type="text/ng-template" id="new_room.html">
-            <div class="modal-header">
-                <h3>Create Chat Room</h3>
-            </div>
-            <form ng-submit="submit()">
-              <div class="modal-body">
-                <label>Room name:</label>
-                <input type="text" ng-model="name" />
-              </div>
-              <div class="modal-footer">
-                  <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-                  <input type="submit" class="btn primary-btn" value="Submit" />
-              </div>
-            </form>
-        </script>
         <button class="btn add-room" ng-click="addRoom.open()">New Room</button>
     </div>
 

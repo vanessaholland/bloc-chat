@@ -6,7 +6,7 @@
         this.open = function () {
 
             var modalInstance = $uibModal.open({
-              templateUrl: 'new_room.html',
+              templateUrl: '/templates/new_room.html',
               controller: function($scope, $uibModalInstance){
                 $scope.cancel = function() {
                       $uibModalInstance.dismiss('cancel');
