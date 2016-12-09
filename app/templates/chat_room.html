@@ -1,0 +1,20 @@
+<section class="chat-room-content">
+     <div>
+       <div>
+           <h2 class="hero-title">{{ selectedRoom }}</h2>
+       </div>
+       <table>
+         <tr ng-repeat="message in messages">
+           <td>
+             <span class="time">{{ message.sentAt }}</span>
+           </td>
+           <td>
+             <span class="username">{{ message.username }} : </span>
+           </td>
+           <td>
+              <span class="content">{{ message.content }}</span>
+           </td>
+        </tr>
+      </table>
+    </div>
+ </section>

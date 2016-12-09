@@ -1,15 +1,11 @@
-<section class="room-list" ng-controller="RoomListCtrl">
+<section class="room-list" ng-controller="RoomListCtrl as roomList">
      <div>
        <table>
          <tr ng-repeat="room in rooms">
            <td>
-              <a><span>Room </span></a>
-           </td>
-           <td>
-              <a><span>{{ room.name }}</span></a>
+              <a ui-sref="chatRoom" ng-click="roomList.getByRoomId(room)"><span>{{ room.name }}</span></a>
            </td>
         </tr>
       </table>
     </div>
  </section>
- 
