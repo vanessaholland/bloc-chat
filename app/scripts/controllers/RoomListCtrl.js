@@ -5,8 +5,15 @@
 
         this.getByRoomId = function (room) {
           var roomId = room.$id;
+          $rootScope.roomId = room.$id;
           $rootScope.selectedRoom = room.name;
           $rootScope.messages = Messages.getMessages(roomId);
+        }
+
+        this.sendMessage = function () {
+          this.newMessage = $scope.newMessage;
+          Messages.sendMessage($rootScope.roomId, this.newMessage);
+          $scope.newMessage = '';
         }
     }
 
