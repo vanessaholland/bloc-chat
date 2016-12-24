@@ -22,6 +22,7 @@
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
     <script src="/scripts/ui-bootstrap-tpls-2.3.0.min.js"></script>
+    <script src="/scripts/FirebaseAuth.js"></script>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/services/Room.js"></script>
     <script src="/scripts/services/Messages.js"></script>
@@ -37,15 +38,5 @@
         <button class="btn add-room" ng-click="addRoom.open()">New Room</button>
     </div>
 
-    <script>
-      var config = {
-        apiKey: "AIzaSyBJH9lISpo3B-Grw99476d1jbo7prbKGfU",
-        authDomain: "bloc-chat-e33ba.firebaseapp.com",
-        databaseURL: "https://bloc-chat-e33ba.firebaseio.com",
-        storageBucket: "bloc-chat-e33ba.appspot.com",
-        messagingSenderId: "41547300094"
-      };
-      firebase.initializeApp(config);
-    </script>
 </body>
 </html>
